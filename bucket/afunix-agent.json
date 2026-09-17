@@ -1,0 +1,30 @@
+{
+    "version": "0.1.1",
+    "description": "Expose a Windows SSH agent backend through a native AF_UNIX socket",
+    "homepage": "https://github.com/Nanamiiiii/afunix-agent",
+    "license": "MIT",
+    "notes": [
+        "Requires Windows 10 version 1803 or later and GnuPG gpg-agent.",
+        "Add 'enable-ssh-support' and 'enable-putty-support' to gpg-agent.conf, then restart gpg-agent.",
+        "Run 'afunix-agent start' to start the daemon.",
+        "Set the socket for the current PowerShell session: $env:SSH_AUTH_SOCK = afunix-agent socket"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nanamiiiii/afunix-agent/releases/download/v0.1.1/afunix-agent-x86_64-pc-windows-msvc.zip",
+            "hash": "e33a51af882f5d417b34f977f69fcaa48b2e52b5b6caf7134359a4680fbc00c5"
+        }
+    },
+    "bin": "afunix-agent.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Nanamiiiii/afunix-agent/releases/download/v$version/afunix-agent-x86_64-pc-windows-msvc.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
