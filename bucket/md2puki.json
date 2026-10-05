@@ -1,0 +1,31 @@
+{
+    "version": "0.3.3",
+    "description": "Markdown to PukiWiki notation converter",
+    "homepage": "https://github.com/Nanamiiiii/md2puki",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nanamiiiii/md2puki/releases/download/v0.3.3/md2puki_Windows_x86_64.zip",
+            "hash": "ed225b1af434bfbeacd277ff4a2c3492bcc72394f50d12ea4c7682b09d435a8f"
+        },
+        "arm64": {
+            "url": "https://github.com/Nanamiiiii/md2puki/releases/download/v0.3.3/md2puki_Windows_arm64.zip",
+            "hash": "3d9b442d06c09fbece90bf53021d61071745be7263a46e8f7dead5f40d1537b2"
+        }
+    },
+    "bin": "md2puki.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Nanamiiiii/md2puki/releases/download/v$version/md2puki_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/Nanamiiiii/md2puki/releases/download/v$version/md2puki_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/Nanamiiiii/md2puki/releases/download/v$version/md2puki_$version_checksums.txt"
+        }
+    }
+}
